@@ -1,0 +1,13 @@
+./configure \
+--prefix=/usr/local/php-5.6 \
+--with-config-file-path=/usr/local/php-5.6/etc \
+--with-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-pcre-dir=/usr/local/pcre \
+--with-iconv-dir=/usr/local/libiconv \
+--with-config-file-scan-dir=/usr/local/php/php.d \
+--with-mcrypt \
+--with-openssl \
+--with-pdo-mysql=mysqlnd \
+--enable-mbstring \
+--enable-fpm \

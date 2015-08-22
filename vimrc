@@ -1,0 +1,9 @@
+set nocp
+set ts=4
+set sw=4
+set smarttab
+set et
+set ambiwidth=double
+set backspace=indent,eol,start
+syntax on
+set autoindent
