@@ -1,4 +1,4 @@
-sudo yum -y install gcc gcc-c++ pcre-devel
+sudo yum -y install gcc gcc-c++ pcre-devel libmcrypt-devel
 
 ./configure  \
 --prefix=/usr/local/php-5.6 \
