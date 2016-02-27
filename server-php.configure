@@ -19,3 +19,10 @@ sudo yum -y install gcc gcc-c++ pcre-devel libmcrypt-devel
 --enable-sockets \
 --enable-tokenizer \
 --enable-zip
+
+
+内存小于256M的话加上
+--disable-fileinfo
+
+新建www用户
+useradd -s /sbin/nologin -M www
