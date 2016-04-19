@@ -9,8 +9,11 @@ sudo useradd -s /sbin/nologin -M mysql
 ```
  - 包
 ```bash
-sudo yum -y install gcc gcc-c++ pcre-devel libmcrypt-devel
-sudo yum -y install wget autoconf automake bison bzip2 bzip2-devel curl curl-devel cmake cpp crontabs diffutils elinks e2fsprogs-devel expat-devel file flex freetype-devel gcc gcc-c++ gd glibc-devel glib2-devel gettext-devel gmp-devel icu kernel-devel libaio libtool-libs libjpeg-devel libpng-devel libxslt libxslt-devel libxml2 libxml2-devel libidn-devel libcap-devel libtool-ltdl-devel libc-client-devel libicu libicu-devel lynx zip zlib-devel unzip patch mlocate make ncurses-devel readline readline-devel vim-minimal sendmail pam-devel pcre pcre-devel openldap openldap-devel openssl openssl-devel perl-DBD-MySQL
+sudo yum -y install file flex freetype-devel gmp-devel icu kernel-devel
+sudo yum -y install gcc gcc-c++ make cmake cpp autoconf automake
+sudo yum -y install wget curl curl-devel pcre-devel zip unzip
+sudo yum -y install gd glibc-devel glib2-devel gettext-devel bison bzip2 bzip2-devel libmcrypt-devel libtool-libs libjpeg-devel libpng-devel libxslt libxslt-devel libxml2 libxml2-devel libidn-devel libcap-devel libtool-ltdl-devel libc-client-devel libicu libicu-devel lynx zlib-devel
+sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio patch mlocate ncurses-devel readline readline-devel vim-minimal sendmail pam-devel pcre pcre-devel openldap openldap-devel openssl openssl-devel perl-DBD-MySQL
 ```
 
 ### php配置
