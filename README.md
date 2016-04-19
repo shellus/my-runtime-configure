@@ -1,2 +1,83 @@
-# my-build-configure
-我的开发环境编译参数
+# 我的开发环境编译参数
+记录我使用的nginx、php、mysql运行时配置
+
+### 基础操作
+ - 新建用户
+```bash
+sudo useradd -s /sbin/nologin -M www
+sudo useradd -s /sbin/nologin -M mysql
+```
+ - 包
+```bash
+sudo yum -y install gcc gcc-c++ pcre-devel libmcrypt-devel
+sudo yum -y install wget autoconf automake bison bzip2 bzip2-devel curl curl-devel cmake cpp crontabs diffutils elinks e2fsprogs-devel expat-devel file flex freetype-devel gcc gcc-c++ gd glibc-devel glib2-devel gettext-devel gmp-devel icu kernel-devel libaio libtool-libs libjpeg-devel libpng-devel libxslt libxslt-devel libxml2 libxml2-devel libidn-devel libcap-devel libtool-ltdl-devel libc-client-devel libicu libicu-devel lynx zip zlib-devel unzip patch mlocate make ncurses-devel readline readline-devel vim-minimal sendmail pam-devel pcre pcre-devel openldap openldap-devel openssl openssl-devel perl-DBD-MySQL
+```
+
+### php配置
+
+```bash
+./configure  \
+--prefix=/usr/local/php-5.6 \
+--enable-fpm \
+--with-config-file-path=/usr/local/php-5.6/etc \
+--disable-fileinfo \
+--with-mhash \
+--with-curl \
+--with-mcrypt \
+--with-openssl \
+--with-pdo-mysql \
+--with-mysql \
+--with-mysqli \
+--enable-json \
+--enable-mbstring \
+--enable-pcntl \
+--enable-session \
+--enable-sockets \
+--enable-tokenizer \
+--enable-zip
+
+make
+
+sudo make install
+```
+
+内存小于256M的话加上
+```bash
+--disable-fileinfo
+```
+
+
+### Mysql配置
+```bash
+cmake \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_DATADIR=/usr/local/mysql/data \
+-DMYSQL_UNIX_ADDR=/tmp/mysql.sock \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_EXTRA_CHARSETS=complex \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_READLINE=1 \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DWITH_FEDERATED_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_EMBEDDED_SERVER=1
+
+make
+
+sudo make install
+
+```
+导入数据库
+
+```bash
+sudo /usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --user=mysql
+```
+### nginx配置
+```bash
+./configure --with-http_ssl_module
+make
+sudo make install
+```
