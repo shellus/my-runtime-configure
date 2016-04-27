@@ -38,7 +38,11 @@ sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio
 --enable-sockets \
 --enable-tokenizer \
 --enable-zip \
---with-gd
+--with-gd \
+--with-zlib-dir=/usr/lib \
+ --with-png-dir=/usr/lib \
+ --with-jpeg-dir=/usr/lib \
+ --with-gettext
 
 make
 
