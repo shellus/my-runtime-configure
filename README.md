@@ -37,7 +37,8 @@ sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio
 --enable-session \
 --enable-sockets \
 --enable-tokenizer \
---enable-zip
+--enable-zip \
+--with-gd
 
 make
 
