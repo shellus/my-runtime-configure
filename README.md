@@ -42,7 +42,7 @@ sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio
 --with-zlib-dir \
  --with-png-dir \
  --with-jpeg-dir \
- --with-freetype \
+--with-freetype-dir=/usr/ \
  --with-gettext
  
 
