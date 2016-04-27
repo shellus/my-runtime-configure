@@ -16,7 +16,7 @@ sudo yum -y install gd glibc-devel glib2-devel gettext-devel bison bzip2 bzip2-d
 sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio patch mlocate ncurses-devel readline readline-devel vim-minimal sendmail pam-devel pcre pcre-devel openldap openldap-devel openssl openssl-devel perl-DBD-MySQL
 ```
 
-### php配置
+### php5.6配置
 
 ```bash
 ./configure  \
@@ -39,10 +39,13 @@ sudo yum -y install crontabs diffutils elinks e2fsprogs-devel expat-devel libaio
 --enable-tokenizer \
 --enable-zip \
 --with-gd \
---with-zlib-dir=/usr/lib \
- --with-png-dir=/usr/lib \
- --with-jpeg-dir=/usr/lib \
+--with-zlib-dir \
+ --with-png-dir \
+ --with-jpeg-dir \
+ --with-freetype \
  --with-gettext
+ 
+
 
 make
 
