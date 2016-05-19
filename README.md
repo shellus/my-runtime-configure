@@ -56,11 +56,12 @@ openssl-devel perl-DBD-MySQL
 --with-freetype-dir=/usr/ \
  --with-gettext
  
-
-
 make
 
 sudo make install
+
+#设置全局变量
+sudo ln -s /usr/local/php-5.6/bin/php /usr/local/bin/php
 ```
 
 内存小于256M的话加上
@@ -102,4 +103,13 @@ sudo /usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --bas
 ./configure --with-http_ssl_module
 make
 sudo make install
+```
+
+### composer
+```bash
+curl -sS https://getcomposer.org/installer | php 
+or
+php -r "readfile('https://getcomposer.org/installer');" | php
+mv composer.phar /usr/local/bin/composer
+
 ```
