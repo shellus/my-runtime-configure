@@ -98,6 +98,10 @@ sudo make install
 ```bash
 sudo /usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --user=mysql
 ```
+配置mysql root用户的密码为'root'
+```bash
+sudo /usr/local/mysql/bin/mysql -e "grant all privileges on *.* to root@'localhost' identified by \"root\" with grant option;"
+```
 ### nginx配置
 ```bash
 ./configure --with-http_ssl_module
