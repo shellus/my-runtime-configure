@@ -1,6 +1,14 @@
 # 我的开发环境编译参数
 记录我使用的nginx、php、mysql运行时配置
 
+### 下载文件
+```bash
+wget http://cdn.endaosi.com/installer/nginx-1.9.3.tar.gz
+wget http://cdn.endaosi.com/installer/mysql-5.6.26.tar.gz
+wget http://cdn.endaosi.com/installer/php-5.6.12.tar.gz
+
+```
+
 ### 基础操作
  - 新建用户
 ```bash
