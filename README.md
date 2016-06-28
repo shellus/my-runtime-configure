@@ -76,7 +76,7 @@ sudo ln -s /usr/local/php-5.6/bin/php /usr/local/bin/php
 ```bash
 --disable-fileinfo
 ```
-内存更小的话
+内存更小的话使用yum二进制安装
 ```bash
 
 #Centos 5.X
@@ -87,7 +87,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-yum  install epel-release
+yum install epel-release
 yum install libmcrypt libmcrypt-devel mcrypt mhash
 yum install php56w php56w-cli php56w-common php56w-gd php56w-ldap php56w-mbstring php56w-mcrypt php56w-mysql php56w-pdo
 yum install php56w-devel
