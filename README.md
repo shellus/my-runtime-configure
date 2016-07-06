@@ -89,7 +89,7 @@ rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
 yum install epel-release
 yum install libmcrypt libmcrypt-devel mcrypt mhash
-yum install php56w php56w-cli php56w-common php56w-gd php56w-ldap php56w-mbstring php56w-mcrypt php56w-xmlwriter php56w-mysql php56w-pdo php56w-pear php56w-intl php56w-devel
+yum install php56w php56w-cli php56w-fpm php56w-common php56w-gd php56w-ldap php56w-mbstring php56w-mcrypt php56w-xmlwriter php56w-mysql php56w-pdo php56w-pear php56w-intl php56w-devel
 ```
 
 
